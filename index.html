@@ -22,13 +22,20 @@
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Hide scrollbar for the screenshot carousels but keep functionality */
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
+        /* Custom sleek scrollbar for screenshot carousels */
+        .screenshot-slider::-webkit-scrollbar {
+            height: 8px;
         }
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+        .screenshot-slider::-webkit-scrollbar-track {
+            background: #181b1d; 
+            border-radius: 4px;
+        }
+        .screenshot-slider::-webkit-scrollbar-thumb {
+            background: #2f353a; 
+            border-radius: 4px;
+        }
+        .screenshot-slider::-webkit-scrollbar-thumb:hover {
+            background: #66bb6a; 
         }
     </style>
 </head>
@@ -53,8 +60,8 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="py-24 sm:py-32 max-w-6xl mx-auto px-6 border-b border-customBorder">
+    <!-- Hero Section (Reduced top padding to fix the massive gap) -->
+    <section class="pt-12 pb-20 sm:pt-16 sm:pb-28 max-w-6xl mx-auto px-6 border-b border-customBorder">
         <div class="max-w-3xl">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-customSurface border border-customBorder text-customGreen text-sm font-medium tracking-wide mb-6">
                 <span class="w-2 h-2 rounded-full bg-customGreen"></span> Solving Real World Problems
@@ -93,12 +100,12 @@
                         </div>
                     </div>
                     
-                    <!-- Horizontal Scrolling Screenshots (Using object-contain) -->
-                    <div class="flex overflow-x-auto gap-4 pb-4 snap-x mb-6 scrollbar-hide">
-                        <img src="assets/screenshots/dinomind%20ss1.png" alt="DinoMind Screen 1" class="h-72 w-auto object-contain rounded-lg border border-customBorder snap-center shadow-lg bg-customBg">
-                        <img src="assets/screenshots/dinomind%20ss2.png" alt="DinoMind Screen 2" class="h-72 w-auto object-contain rounded-lg border border-customBorder snap-center shadow-lg bg-customBg">
-                        <img src="assets/screenshots/dinomind%20ss3.png" alt="DinoMind Screen 3" class="h-72 w-auto object-contain rounded-lg border border-customBorder snap-center shadow-lg bg-customBg">
-                        <img src="assets/screenshots/dinomind%20ss4.png" alt="DinoMind Screen 4" class="h-72 w-auto object-contain rounded-lg border border-customBorder snap-center shadow-lg bg-customBg">
+                    <!-- Horizontal Scrolling Screenshots (Added shrink-0 and removed borders) -->
+                    <div class="flex overflow-x-auto gap-4 pb-4 snap-x mb-6 screenshot-slider">
+                        <img src="assets/screenshots/dinomind%20ss1.png" alt="DinoMind Screen 1" class="h-72 w-auto shrink-0 object-contain snap-center rounded-md">
+                        <img src="assets/screenshots/dinomind%20ss2.png" alt="DinoMind Screen 2" class="h-72 w-auto shrink-0 object-contain snap-center rounded-md">
+                        <img src="assets/screenshots/dinomind%20ss3.png" alt="DinoMind Screen 3" class="h-72 w-auto shrink-0 object-contain snap-center rounded-md">
+                        <img src="assets/screenshots/dinomind%20ss4.png" alt="DinoMind Screen 4" class="h-72 w-auto shrink-0 object-contain snap-center rounded-md">
                     </div>
 
                     <p class="text-gray-300 text-base leading-relaxed mb-6">
@@ -128,11 +135,11 @@
                         </div>
                     </div>
 
-                    <!-- Horizontal Scrolling Screenshots (Using object-contain) -->
-                    <div class="flex overflow-x-auto gap-4 pb-4 snap-x mb-6 scrollbar-hide">
-                        <img src="assets/screenshots/emy%20ss1.png" alt="Emergency App Screen 1" class="h-72 w-auto object-contain rounded-lg border border-customBorder snap-center shadow-lg bg-customBg">
-                        <img src="assets/screenshots/emy%20ss2.png" alt="Emergency App Screen 2" class="h-72 w-auto object-contain rounded-lg border border-customBorder snap-center shadow-lg bg-customBg">
-                        <img src="assets/screenshots/emy%20ss3.png" alt="Emergency App Screen 3" class="h-72 w-auto object-contain rounded-lg border border-customBorder snap-center shadow-lg bg-customBg">
+                    <!-- Horizontal Scrolling Screenshots (Added shrink-0 and removed borders) -->
+                    <div class="flex overflow-x-auto gap-4 pb-4 snap-x mb-6 screenshot-slider">
+                        <img src="assets/screenshots/emy%20ss1.png" alt="Emergency App Screen 1" class="h-72 w-auto shrink-0 object-contain snap-center rounded-md">
+                        <img src="assets/screenshots/emy%20ss2.png" alt="Emergency App Screen 2" class="h-72 w-auto shrink-0 object-contain snap-center rounded-md">
+                        <img src="assets/screenshots/emy%20ss3.png" alt="Emergency App Screen 3" class="h-72 w-auto shrink-0 object-contain snap-center rounded-md">
                     </div>
 
                     <p class="text-gray-300 text-base leading-relaxed mb-6">
