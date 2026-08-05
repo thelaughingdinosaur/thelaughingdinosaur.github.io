@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Laughing Dinosaur | Android Developer & Security Architect</title>
-    <!-- Tailwind CSS CDN for modern styling -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        darkBg: '#0e1215',
-                        matrixGreen: '#57b21f',
-                        cardBg: '#161c23',
-                        borderCol: '#212a35'
+                        customBg: '#181b1d',
+                        customGreen: '#66bb6a',
+                        customSurface: '#242424',
+                        customBorder: '#2f353a'
                     }
                 }
             }
@@ -23,25 +23,25 @@
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-darkBg text-gray-100 font-sans antialiased selection:bg-matrixGreen selection:text-black">
+<body class="bg-customBg text-gray-200 font-sans antialiased selection:bg-customGreen selection:text-black">
 
-    <!-- Header / Navbar -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-darkBg/80 border-b border-borderCol">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-customBg/80 border-b border-customBorder">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-matrixGreen/10 border border-matrixGreen flex items-center justify-center text-matrixGreen font-bold text-xl">
+                <div class="w-9 h-9 rounded-lg bg-customSurface border border-customBorder flex items-center justify-center text-customGreen font-bold">
                     🦖
                 </div>
-                <span class="font-bold text-xl tracking-wider text-white">THE LAUGHING DINOSAUR</span>
+                <span class="font-bold tracking-tight text-white text-sm sm:text-base">THE LAUGHING DINOSAUR</span>
             </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#apps" class="hover:text-matrixGreen transition-colors">Apps</a>
-                <a href="#security-audits" class="text-matrixGreen flex items-center gap-1.5 font-semibold"><i class="fa-solid fa-shield-halved"></i> DinoVault Security</a>
-                <a href="#about" class="hover:text-matrixGreen transition-colors">About</a>
-                <a href="#contact" class="hover:text-matrixGreen transition-colors">Contact</a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="#apps" class="hover:text-customGreen transition-colors">Apps</a>
+                <a href="#security-audits" class="text-customGreen flex items-center gap-1.5 font-semibold"><i class="fa-solid fa-shield-halved"></i> DinoVault Security</a>
+                <a href="#about" class="hover:text-customGreen transition-colors">About</a>
+                <a href="#contact" class="hover:text-customGreen transition-colors">Contact</a>
             </nav>
             <div>
-                <a href="#security-audits" class="bg-matrixGreen text-black font-semibold px-4 py-2 rounded-lg text-sm hover:bg-opacity-90 transition-all shadow-lg shadow-matrixGreen/20">
+                <a href="#security-audits" class="bg-customGreen text-black font-semibold px-4 py-2 rounded-lg text-xs sm:text-sm hover:opacity-90 transition-all">
                     Security Specs
                 </a>
             </div>
@@ -49,90 +49,88 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative overflow-hidden py-24 lg:py-32 border-b border-borderCol bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-matrixGreen/10 via-darkBg to-darkBg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-matrixGreen/10 border border-matrixGreen/30 text-matrixGreen text-xs font-semibold uppercase tracking-widest mb-6">
-                <span class="w-2 h-2 rounded-full bg-matrixGreen animate-pulse"></span> Solving Real World Problems
+    <section class="py-24 sm:py-32 max-w-6xl mx-auto px-6 border-b border-customBorder">
+        <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-customSurface border border-customBorder text-customGreen text-xs font-medium tracking-wide mb-6">
+                <span class="w-1.5 h-1.5 rounded-full bg-customGreen"></span> Solving Real World Problems
             </div>
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6">
-                Engineering Secure Apps <br class="hidden sm:inline">for the <span class="text-matrixGreen">Digital Future</span>.
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+                Building reliable Android apps with <span class="text-customGreen">uncompromising security</span>.
             </h1>
-            <p class="max-w-2xl mx-auto text-lg text-gray-400 mb-10">
-                Hi, I'm <strong class="text-white">The Laughing Dinosaur</strong>. An independent Android developer focused on absolute user privacy, high-efficiency tools, and unbreakable cryptography.
+            <p class="text-lg text-gray-400 mb-10 leading-relaxed font-normal">
+                Hi, I'm <strong class="text-white font-medium">The Laughing Dinosaur</strong>. An independent Android developer focused on crafting clean user experiences and robust local-first cryptographic architectures.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#apps" class="bg-matrixGreen text-black font-bold px-8 py-3.5 rounded-xl hover:bg-opacity-90 transition-all flex items-center gap-2">
-                    <i class="fa-solid fa-rocket"></i> Explore My Apps
+            <div class="flex flex-wrap gap-4">
+                <a href="#apps" class="bg-customGreen text-black font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-all flex items-center gap-2 text-sm">
+                    <i class="fa-solid fa-rocket"></i> Explore Apps
                 </a>
-                <a href="#security-audits" class="bg-cardBg border border-borderCol text-white font-semibold px-8 py-3.5 rounded-xl hover:border-matrixGreen transition-all flex items-center gap-2">
-                    <i class="fa-solid fa-lock text-matrixGreen"></i> View DinoVault Audits
+                <a href="#security-audits" class="bg-customSurface border border-customBorder text-white font-medium px-6 py-3 rounded-lg hover:border-customGreen transition-all flex items-center gap-2 text-sm">
+                    <i class="fa-solid fa-lock text-customGreen"></i> DinoVault Audits
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Apps Showcase Section -->
-    <section id="apps" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Published Android Ecosystem</h2>
-            <p class="text-gray-400 max-w-xl mx-auto">Built with modern native Android components, optimized for speed, security, and real-world utility.</p>
+    <section id="apps" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="mb-16">
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-3">Android Ecosystem</h2>
+            <p class="text-gray-400 text-sm">Production software published and optimized for the Google Play Store.</p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            <!-- DinoMind Showcase Card -->
-            <div class="bg-cardBg border border-borderCol rounded-2xl p-8 flex flex-col justify-between hover:border-matrixGreen/50 transition-all relative overflow-hidden group">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-matrixGreen/5 rounded-full blur-2xl group-hover:bg-matrixGreen/10 transition-all"></div>
+            <!-- DinoMind Card -->
+            <div class="bg-customSurface border border-customBorder rounded-xl p-8 flex flex-col justify-between hover:border-customGreen/40 transition-all">
                 <div>
                     <div class="flex items-center gap-4 mb-6">
-                        <div class="w-16 h-16 rounded-2xl bg-darkBg border border-borderCol flex items-center justify-center text-3xl shadow-inner">
+                        <div class="w-14 h-14 rounded-lg bg-customBg border border-customBorder flex items-center justify-center text-2xl">
                             🧠
                         </div>
                         <div>
-                            <span class="text-xs uppercase tracking-wider text-matrixGreen font-bold">Flagship Productivity App</span>
-                            <h3 class="text-2xl font-bold text-white">DinoMind</h3>
+                            <span class="text-[11px] uppercase tracking-wider text-customGreen font-semibold">Flagship Product</span>
+                            <h3 class="text-xl font-bold text-white">DinoMind</h3>
                         </div>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        A high-efficiency toolkit designed to streamline personal organization and enhance productivity. Features a link repository, media watchlist, idea hub, financial tracker, and <strong>DinoVault</strong>—a built-in zero-knowledge encrypted password & card manager.
+                        An all-in-one productivity suite featuring custom task tracking, lists, and <strong>DinoVault</strong>—a built-in secure password and card storage system built with zero-knowledge principles.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="text-xs bg-darkBg border border-borderCol text-gray-300 px-3 py-1 rounded-full">Zero-Knowledge</span>
-                        <span class="text-xs bg-darkBg border border-borderCol text-gray-300 px-3 py-1 rounded-full">XChaCha20-Poly1305</span>
-                        <span class="text-xs bg-darkBg border border-borderCol text-gray-300 px-3 py-1 rounded-full">Cloud Sync / Local</span>
+                        <span class="text-xs bg-customBg border border-customBorder text-gray-300 px-2.5 py-1 rounded-md">Zero-Knowledge</span>
+                        <span class="text-xs bg-customBg border border-customBorder text-gray-300 px-2.5 py-1 rounded-md">XChaCha20</span>
+                        <span class="text-xs bg-customBg border border-customBorder text-gray-300 px-2.5 py-1 rounded-md">Jetpack Compose</span>
                     </div>
                 </div>
                 <div>
-                    <a href="https://play.google.com/store/apps/details?id=com.techmania.pocketmind" target="_blank" class="inline-flex items-center gap-3 bg-darkBg border border-borderCol hover:border-matrixGreen text-white px-5 py-3 rounded-xl font-medium transition-all w-full justify-center">
-                        <i class="fa-brands fa-google-play text-matrixGreen text-lg"></i> Get DinoMind on Google Play
+                    <a href="https://play.google.com/store/apps/details?id=com.techmania.pocketmind" target="_blank" class="inline-flex items-center gap-2.5 bg-customBg border border-customBorder hover:border-customGreen text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all w-full justify-center">
+                        <i class="fa-brands fa-google-play text-customGreen"></i> Get on Google Play
                     </a>
                 </div>
             </div>
 
-            <!-- Emergency App Showcase Card -->
-            <div class="bg-cardBg border border-borderCol rounded-2xl p-8 flex flex-col justify-between hover:border-matrixGreen/50 transition-all relative overflow-hidden group">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-matrixGreen/5 rounded-full blur-2xl group-hover:bg-matrixGreen/10 transition-all"></div>
+            <!-- Emergency App Card -->
+            <div class="bg-customSurface border border-customBorder rounded-xl p-8 flex flex-col justify-between hover:border-customGreen/40 transition-all">
                 <div>
                     <div class="flex items-center gap-4 mb-6">
-                        <div class="w-16 h-16 rounded-2xl bg-darkBg border border-borderCol flex items-center justify-center text-3xl shadow-inner">
+                        <div class="w-14 h-14 rounded-lg bg-customBg border border-customBorder flex items-center justify-center text-2xl">
                             🚨
                         </div>
                         <div>
-                            <span class="text-xs uppercase tracking-wider text-matrixGreen font-bold">Safety Utility</span>
-                            <h3 class="text-2xl font-bold text-white">The Emergency App</h3>
+                            <span class="text-[11px] uppercase tracking-wider text-customGreen font-semibold">Safety Utility</span>
+                            <h3 class="text-xl font-bold text-white">The Emergency App</h3>
                         </div>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        A dedicated, lightning-fast safety utility designed for critical moments. Instantly triggers emergency communications, handles safety check-ins, and offers rapid access points when you need reliability most.
+                        A dedicated safety tool engineered for critical moments, allowing rapid emergency triggers and streamlined offline alert handling when seconds count.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="text-xs bg-darkBg border border-borderCol text-gray-300 px-3 py-1 rounded-full">Rapid Response</span>
-                        <span class="text-xs bg-darkBg border border-borderCol text-gray-300 px-3 py-1 rounded-full">Offline Reliability</span>
+                        <span class="text-xs bg-customBg border border-customBorder text-gray-300 px-2.5 py-1 rounded-md">Rapid Response</span>
+                        <span class="text-xs bg-customBg border border-customBorder text-gray-300 px-2.5 py-1 rounded-md">Offline First</span>
                     </div>
                 </div>
                 <div>
-                    <a href="#" target="_blank" class="inline-flex items-center gap-3 bg-darkBg border border-borderCol hover:border-matrixGreen text-white px-5 py-3 rounded-xl font-medium transition-all w-full justify-center">
-                        <i class="fa-brands fa-google-play text-matrixGreen text-lg"></i> View on Google Play
+                    <a href="#" target="_blank" class="inline-flex items-center gap-2.5 bg-customBg border border-customBorder hover:border-customGreen text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all w-full justify-center">
+                        <i class="fa-brands fa-google-play text-customGreen"></i> View on Google Play
                     </a>
                 </div>
             </div>
@@ -140,106 +138,89 @@
         </div>
     </section>
 
-    <!-- SPECIAL PLACE: DinoVault Security Transparency & Audits Hub -->
-    <section id="security-audits" class="py-24 bg-cardBg/40 border-y border-borderCol relative">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- DinoVault Security Hub -->
+    <section id="security-audits" class="py-24 bg-customSurface/50 border-y border-customBorder">
+        <div class="max-w-4xl mx-auto px-6">
             
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-matrixGreen/10 border border-matrixGreen/30 text-matrixGreen text-xs font-semibold uppercase tracking-widest mb-4">
-                    <i class="fa-solid fa-shield-dog"></i> Dedicated Security Hub
+            <div class="mb-14">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-customSurface border border-customBorder text-customGreen text-xs font-medium tracking-wide mb-4">
+                    <i class="fa-solid fa-shield-dog"></i> Security Center
                 </div>
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">DinoVault Security Audits</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Absolute transparency for cryptographic standards, threat mitigations, and safety design specifications powering DinoVault inside DinoMind.</p>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">DinoVault Security Implementation</h2>
+                <p class="text-gray-400 text-sm leading-relaxed">Public transparency documentation outlining cryptographic models, local encryption hygiene, and threat mitigation specs for DinoVault.</p>
             </div>
 
-            <!-- Security Document Container -->
-            <div class="bg-darkBg border border-borderCol rounded-2xl p-6 sm:p-10 shadow-2xl space-y-12 text-gray-300">
+            <!-- Specs Box -->
+            <div class="bg-customSurface border border-customBorder rounded-xl p-6 sm:p-10 space-y-10 text-gray-300 text-sm">
                 
                 <!-- Notice Banner -->
-                <div class="p-4 rounded-xl bg-matrixGreen/5 border border-matrixGreen/20 flex items-start gap-4">
-                    <i class="fa-solid fa-circle-info text-matrixGreen text-xl mt-1"></i>
+                <div class="p-4 rounded-lg bg-customBg border border-customBorder flex items-start gap-3">
+                    <i class="fa-solid fa-circle-info text-customGreen mt-0.5"></i>
                     <div>
-                        <h4 class="text-white font-semibold mb-1">Security Transparency Repository</h4>
-                        <p class="text-sm text-gray-400">This center outlines security implementation design, cryptographic algorithms, and lockout metrics used by DinoVault. Provided for public verification and educational code reviews.</p>
+                        <h4 class="text-white font-medium mb-1">Security Transparency Repository</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">This overview provides insight into intended cryptographic designs, key derivation parameters, and brute-force defenses used in DinoVault.</p>
                     </div>
                 </div>
 
-                <!-- Section 1: High Level Design -->
+                <!-- Section 1 -->
                 <div>
-                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span class="text-matrixGreen">01.</span> High-Level Security Architecture
+                    <h3 class="text-base font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-customGreen">01.</span> High-Level Architecture
                     </h3>
-                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                        <li class="bg-cardBg border border-borderCol p-4 rounded-xl flex items-start gap-3">
-                            <i class="fa-solid fa-check text-matrixGreen mt-1"></i>
-                            <span>Encryption runs <strong>locally</strong> on user device hardware.</span>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+                        <li class="bg-customBg border border-customBorder p-3.5 rounded-lg flex items-start gap-2.5">
+                            <i class="fa-solid fa-check text-customGreen mt-0.5"></i>
+                            <span>Client-side local encryption execution.</span>
                         </li>
-                        <li class="bg-cardBg border border-borderCol p-4 rounded-xl flex items-start gap-3">
-                            <i class="fa-solid fa-check text-matrixGreen mt-1"></i>
-                            <span>Zero-knowledge architecture model: master passwords are never transmitted.</span>
+                        <li class="bg-customBg border border-customBorder p-3.5 rounded-lg flex items-start gap-2.5">
+                            <i class="fa-solid fa-check text-customGreen mt-0.5"></i>
+                            <span>Zero-knowledge master password handling.</span>
                         </li>
-                        <li class="bg-cardBg border border-borderCol p-4 rounded-xl flex items-start gap-3">
-                            <i class="fa-solid fa-check text-matrixGreen mt-1"></i>
-                            <span>Cloud services handle cipher-text data exclusively.</span>
+                        <li class="bg-customBg border border-customBorder p-3.5 rounded-lg flex items-start gap-2.5">
+                            <i class="fa-solid fa-check text-customGreen mt-0.5"></i>
+                            <span>Cloud storage stores cipher-text data exclusively.</span>
                         </li>
-                        <li class="bg-cardBg border border-borderCol p-4 rounded-xl flex items-start gap-3">
-                            <i class="fa-solid fa-check text-matrixGreen mt-1"></i>
-                            <span>Strict zero-recovery safeguard policy (user retains absolute sovereignty).</span>
+                        <li class="bg-customBg border border-customBorder p-3.5 rounded-lg flex items-start gap-2.5">
+                            <i class="fa-solid fa-check text-customGreen mt-0.5"></i>
+                            <span>No backend master password recovery mechanism.</span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Section 2: Cryptographic Specs -->
+                <!-- Section 2 -->
                 <div>
-                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span class="text-matrixGreen">02.</span> Cryptographic Engine & Primitives
+                    <h3 class="text-base font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-customGreen">02.</span> Cryptographic Primitives
                     </h3>
-                    <div class="bg-cardBg border border-borderCol rounded-xl overflow-hidden">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-borderCol">
-                            <div class="p-6 space-y-3">
-                                <h4 class="font-semibold text-white flex items-center gap-2"><i class="fa-solid fa-key text-matrixGreen"></i> Encryption Cipher</h4>
-                                <p class="text-sm text-gray-400"><strong>XChaCha20-Poly1305</strong> via Google Tink library. Utilizes 256-bit keys and 192-bit nonces for high-speed authenticated encryption with integrity protection.</p>
-                            </div>
-                            <div class="p-6 space-y-3">
-                                <h4 class="font-semibold text-white flex items-center gap-2"><i class="fa-solid fa-fire text-matrixGreen"></i> Key Derivation Function</h4>
-                                <p class="text-sm text-gray-400"><strong>PBKDF2 with HMAC-SHA256</strong> with random per-user salt generation. Vault data operates on high iterations, while export packages scale up to ~310,000 iterations to block offline brute-forcing.</p>
-                            </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-customBg border border-customBorder p-4 rounded-lg space-y-2">
+                            <h4 class="font-semibold text-white text-xs uppercase tracking-wider text-customGreen">Encryption Engine</h4>
+                            <p class="text-xs text-gray-400"><strong>XChaCha20-Poly1305</strong> via Google Tink. Utilizes 256-bit keys and 192-bit nonces for authenticated encryption with data integrity protection.</p>
+                        </div>
+                        <div class="bg-customBg border border-customBorder p-4 rounded-lg space-y-2">
+                            <h4 class="font-semibold text-white text-xs uppercase tracking-wider text-customGreen">Key Derivation (KDF)</h4>
+                            <p class="text-xs text-gray-400"><strong>PBKDF2 with HMAC-SHA256</strong> using per-user random salt. Scales up to ~310,000 iterations on exported packages to mitigate offline brute-force attacks.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Section 3: Brute Force & Memory -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-cardBg border border-borderCol p-6 rounded-xl">
-                        <h4 class="font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-shield-virus text-matrixGreen"></i> Brute-Force Mitigations
-                        </h4>
-                        <ul class="text-sm text-gray-400 space-y-2">
-                            <li>• Enforced artificial delays between failed authentication attempts.</li>
-                            <li>• Escalating temporary lockout intervals for sequential failures.</li>
-                            <li>• Monotonic clocks to prevent simple system time manipulation cheats.</li>
-                        </ul>
+                <!-- Section 3 -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-customBg border border-customBorder p-4 rounded-lg">
+                        <h4 class="font-bold text-white mb-2 text-xs uppercase tracking-wider text-customGreen">Brute-Force Mitigations</h4>
+                        <p class="text-xs text-gray-400 leading-relaxed">Enforced artificial delays, exponential lockout intervals following repeated failed attempts, and monotonic clock checks.</p>
                     </div>
-                    <div class="bg-cardBg border border-borderCol p-6 rounded-xl">
-                        <h4 class="font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-memory text-matrixGreen"></i> In-Memory Hygiene
-                        </h4>
-                        <ul class="text-sm text-gray-400 space-y-2">
-                            <li>• Immediate character array wiping post-password consumption.</li>
-                            <li>• Purging active derived keys upon vault manual/auto lock.</li>
-                            <li>• Clearing decrypted internal memory caches on inactivity timeouts.</li>
-                        </ul>
+                    <div class="bg-customBg border border-customBorder p-4 rounded-lg">
+                        <h4 class="font-bold text-white mb-2 text-xs uppercase tracking-wider text-customGreen">Memory Hygiene</h4>
+                        <p class="text-xs text-gray-400 leading-relaxed">Immediate wiping of character arrays, clearing derived keys upon vault locking, and cache purges on inactivity timeouts.</p>
                     </div>
                 </div>
 
-                <!-- Audit Contact Footer Inside Box -->
-                <div class="pt-6 border-t border-borderCol flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
-                    <div>
-                        <span class="text-gray-400">Found a vulnerability or security flaw?</span>
-                        <p class="text-white font-medium">Responsible disclosure contact active.</p>
-                    </div>
-                    <a href="mailto:TheLaughingDinosaurHere@gmail.com" class="bg-matrixGreen/10 border border-matrixGreen text-matrixGreen hover:bg-matrixGreen hover:text-black font-semibold px-4 py-2 rounded-lg transition-all">
-                        <i class="fa-solid fa-envelope"></i> TheLaughingDinosaurHere@gmail.com
+                <!-- Contact Footer Inside -->
+                <div class="pt-4 border-t border-customBorder flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+                    <span class="text-gray-400">Security feedback or responsible disclosure inquiries:</span>
+                    <a href="mailto:TheLaughingDinosaurHere@gmail.com" class="bg-customBg border border-customBorder text-customGreen hover:border-customGreen px-3.5 py-2 rounded-md font-medium transition-all">
+                        TheLaughingDinosaurHere@gmail.com
                     </a>
                 </div>
 
@@ -249,47 +230,41 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold text-white mb-6">About the Developer</h2>
-                <p class="text-gray-400 mb-4 leading-relaxed">
-                    I am an indie Android developer and computer science student driven by the challenge of designing robust mobile software that treats user privacy as a foundational right rather than an afterthought.
+    <section id="about" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">About the Developer</h2>
+                <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                    I am a computer science student and indie Android developer focused on creating reliable, lightning-fast utilities that respect user privacy as a fundamental standard.
                 </p>
-                <p class="text-gray-400 mb-6 leading-relaxed">
-                    Every project I ship—from productivity ecosystems like DinoMind to critical security safe-boxes like DinoVault—is built with a deep commitment to clean architecture, modern Android UI paradigms, and hardened client-side cryptographic layers.
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Every product is designed with clean architecture principles, native UI frameworks, and robust security layers to ensure complete user data sovereignty.
                 </p>
-                <div class="flex items-center gap-6 text-matrixGreen font-semibold">
-                    <div class="flex items-center gap-2"><i class="fa-solid fa-code"></i> Native Android Expert</div>
-                    <div class="flex items-center gap-2"><i class="fa-solid fa-lock"></i> Cryptography Focused</div>
-                </div>
             </div>
-            <div class="bg-cardBg border border-borderCol p-8 rounded-2xl relative">
-                <div class="absolute -top-3 -right-3 bg-matrixGreen text-black text-xs font-bold px-3 py-1 rounded-full uppercase">Status: Online</div>
-                <h3 class="text-xl font-bold text-white mb-4">Core Tech Stack</h3>
+            <div class="bg-customSurface border border-customBorder p-6 rounded-xl">
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-4 text-customGreen">Technical Competencies</h3>
                 <div class="flex flex-wrap gap-2">
-                    <span class="bg-darkBg border border-borderCol px-3 py-1.5 rounded-lg text-sm text-gray-300">Kotlin</span>
-                    <span class="bg-darkBg border border-borderCol px-3 py-1.5 rounded-lg text-sm text-gray-300">Jetpack Compose</span>
-                    <span class="bg-darkBg border border-borderCol px-3 py-1.5 rounded-lg text-sm text-gray-300">Google Tink</span>
-                    <span class="bg-darkBg border border-borderCol px-3 py-1.5 rounded-lg text-sm text-gray-300">XChaCha20</span>
-                    <span class="bg-darkBg border border-borderCol px-3 py-1.5 rounded-lg text-sm text-gray-300">PBKDF2 / Argon2</span>
-                    <span class="bg-darkBg border border-borderCol px-3 py-1.5 rounded-lg text-sm text-gray-300">Android Studio</span>
+                    <span class="bg-customBg border border-customBorder px-3 py-1.5 rounded-md text-xs text-gray-300">Kotlin</span>
+                    <span class="bg-customBg border border-customBorder px-3 py-1.5 rounded-md text-xs text-gray-300">Jetpack Compose</span>
+                    <span class="bg-customBg border border-customBorder px-3 py-1.5 rounded-md text-xs text-gray-300">Google Tink</span>
+                    <span class="bg-customBg border border-customBorder px-3 py-1.5 rounded-md text-xs text-gray-300">XChaCha20</span>
+                    <span class="bg-customBg border border-customBorder px-3 py-1.5 rounded-md text-xs text-gray-300">PBKDF2</span>
+                    <span class="bg-customBg border border-customBorder px-3 py-1.5 rounded-md text-xs text-gray-300">Android Studio</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-cardBg border-t border-borderCol py-12 text-center text-gray-400 text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            <p class="text-white font-bold text-base">THE LAUGHING DINOSAUR</p>
+    <footer id="contact" class="bg-customSurface border-t border-customBorder py-10 text-center text-gray-400 text-xs">
+        <div class="max-w-6xl mx-auto px-6 space-y-3">
+            <p class="text-white font-bold text-sm">THE LAUGHING DINOSAUR</p>
             <p>Solving real world problems through secure, elegant mobile engineering.</p>
-            <div class="flex justify-center space-x-6 pt-2">
-                <a href="https://github.com/thelaughingdinosaur" target="_blank" class="hover:text-matrixGreen text-xl transition-colors"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:TheLaughingDinosaurHere@gmail.com" class="hover:text-matrixGreen text-xl transition-colors"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://play.google.com/store/apps/dev?id=..." target="_blank" class="hover:text-matrixGreen text-xl transition-colors"><i class="fa-brands fa-google-play"></i></a>
+            <div class="flex justify-center space-x-6 pt-2 text-base">
+                <a href="https://github.com/thelaughingdinosaur" target="_blank" class="hover:text-customGreen transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:TheLaughingDinosaurHere@gmail.com" class="hover:text-customGreen transition-colors"><i class="fa-solid fa-envelope"></i></a>
             </div>
-            <p class="text-xs text-gray-500 pt-6">&copy; 2026 The Laughing Dinosaur. All rights reserved. `app-ads.txt` verified.</p>
+            <p class="text-gray-500 pt-4">&copy; 2026 The Laughing Dinosaur. All rights reserved. `app-ads.txt` verified.</p>
         </div>
     </footer>
 
